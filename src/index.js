@@ -7,7 +7,7 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Suspense fallback='App is loading ...'>
+    <Suspense fallback='Store Front'>
       <App />
     </Suspense>
   </React.StrictMode>,

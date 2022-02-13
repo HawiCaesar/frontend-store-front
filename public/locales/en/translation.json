@@ -1,0 +1,17 @@
+{
+    "appLoading": "The app is loading",
+    "buttons": {
+        "ok": "ok"
+    },
+    "login": {
+        "createAccount": "Create an account",
+        "changeLanguage": "Change Language",
+        "forgotPassword": "Forgot Password?",
+        "or": "or",
+        "input": {      
+            "email": "Email",
+            "password": "Password",
+            "login": "Login"
+        }
+    }
+}

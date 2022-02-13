@@ -1,0 +1,17 @@
+{
+    "appLoading": "Programu inapakia",
+    "buttons": {
+        "ok": "Sawa"
+    },
+    "login": {
+        "createAccount": "Fungua akaunti",
+        "changeLanguage": "Badilisha Lugha",
+        "forgotPassword": "Umesahau nywila?",
+        "or": "ama",
+        "input": {      
+            "email": "Barua Pepe",
+            "password": "Nenosiri",
+            "login": "Ingia"
+        }
+    }
+}
