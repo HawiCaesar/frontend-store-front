@@ -3,6 +3,11 @@
     "buttons": {
         "ok": "ok"
     },
+    "languageSelection": {
+        "selectPrompt": "Select your language",
+        "select": "Select",
+        "confirm": "Confirm Selection"
+    },
     "login": {
         "createAccount": "Create an account",
         "changeLanguage": "Change Language",

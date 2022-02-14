@@ -1,14 +1,14 @@
 import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
 import './main.css';
-import App from './App';
+import { AppRoutes } from './AppRoutes';
 import './i18n';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
     <Suspense fallback='Store Front'>
-      <App />
+      <AppRoutes />
     </Suspense>
   </React.StrictMode>,
   document.getElementById('root')

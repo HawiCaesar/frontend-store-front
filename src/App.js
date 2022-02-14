@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 
-function App() {
+export function App() {
   const { t } = useTranslation();
   return (
     <div className="flex flex-col h-screen bg-gray-100">
@@ -17,8 +17,8 @@ function App() {
 
                 <form className="mt-10" method="POST">
 
-                    <label for="email" className="block text-xs font-semibold text-gray-600 uppercase">{t('login.input.email')}</label>
-                    <input id="email" type="email" name="email" placeholder={t('login.input.email')} autocomplete="email"
+                    <label htmlFor="email" className="block text-xs font-semibold text-gray-600 uppercase">{t('login.input.email')}</label>
+                    <input id="email" type="email" name="email" placeholder={t('login.input.email')} autoComplete="email"
                         className="block w-full py-3 px-1 mt-2 
                         text-gray-800 appearance-none 
                         border-b-2 border-gray-100
@@ -26,8 +26,8 @@ function App() {
                         required />
 
 
-                    <label for="password" className="block mt-2 text-xs font-semibold text-gray-600 uppercase">{t('login.input.password')}</label>
-                    <input id="password" type="password" name="password" placeholder={t('login.input.password')} autocomplete="current-password"
+                    <label htmlFor="password" className="block mt-2 text-xs font-semibold text-gray-600 uppercase">{t('login.input.password')}</label>
+                    <input id="password" type="password" name="password" placeholder={t('login.input.password')} autoComplete="current-password"
                         className="block w-full py-3 px-1 mt-2 mb-4
                         text-gray-800 appearance-none 
                         border-b-2 border-gray-100
@@ -49,7 +49,7 @@ function App() {
                         </a>
 
                         <p className="flex-1 text-gray-500 text-md mx-4 my-1 sm:my-auto">
-                            or
+                            {t('login.or')}
                         </p>
             
                         <a href="register" className="flex-2 underline">
@@ -58,13 +58,11 @@ function App() {
                     </div>
                 </form>
 
-                <a href="change-language" className="text-center flex-2 underline">
-                    Change language
+                <a href="/language-selection" className="text-center flex-2 underline">
+                  {t('login.changeLanguage')}
                 </a>
             </div>
         </div>
     </div>
   );
 }
-
-export default App;

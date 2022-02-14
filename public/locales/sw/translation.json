@@ -3,6 +3,11 @@
     "buttons": {
         "ok": "Sawa"
     },
+    "languageSelection": {
+        "selectPrompt": "Chagua lugha yako",
+        "select": "Chagua",
+        "confirm": "Thibitisha uteuzi"
+    },
     "login": {
         "createAccount": "Fungua akaunti",
         "changeLanguage": "Badilisha Lugha",
