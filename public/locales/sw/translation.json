@@ -17,6 +17,13 @@
             "email": "Barua Pepe",
             "password": "Nenosiri",
             "login": "Ingia"
-        }
+        },
+        "validations": {
+            "email": {
+                "required": "Barua pepe Inahitajika",
+                "invalid": "Anwani ya barua pepe si sahihi"
+            },
+            "password": "Nenosiri linahitajika"
+          }
     }
 }

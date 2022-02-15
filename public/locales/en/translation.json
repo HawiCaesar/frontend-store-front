@@ -17,6 +17,13 @@
             "email": "Email",
             "password": "Password",
             "login": "Login"
+        },
+        "validations": {
+          "email": {
+            "required": "Email Requried",
+            "invalid": "Invalid email address"
+          },
+          "password": "Password required"
         }
     }
 }
