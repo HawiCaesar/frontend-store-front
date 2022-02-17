@@ -1,8 +1,15 @@
+import { useContext } from 'react'
+import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Formik } from 'formik';
+import { AuthContext } from './contexts/AuthContext';
 
 export function Login() {
-  const { t } = useTranslation();
+    
+    const navigate = useNavigate()
+    const { t } = useTranslation();
+    const { login } = useContext(AuthContext)
+
   return (
     <div className="flex flex-col h-screen bg-gray-100">
         <div className="grid place-items-center mx-2 my-20 sm:my-auto">
@@ -32,11 +39,17 @@ export function Login() {
                         }
                         return errors;
                     }}
-                    onSubmit={(values, { setSubmitting }) => {
-                        setTimeout(() => {
-                        alert(JSON.stringify(values, null, 2));
-                        setSubmitting(false);
-                        }, 400);
+                    onSubmit={async (values, { setSubmitting }) => {
+
+                       
+                        const response = await login(values)
+
+                        if (!response.errorMessage) {
+                            return navigate('/dashboard')
+                        }
+
+                        setSubmitting(false)
+
                     }}
                     >
                     {({
@@ -49,8 +62,6 @@ export function Login() {
                         isValid,
                         dirty
                     }) => {
-
-                        console.log(errors, isValid, touched)
                         return (
                         <form className="mt-10" onSubmit={handleSubmit}>
                             <label htmlFor="email" className="block text-xs font-semibold text-gray-600 uppercase">{t('login.input.email')}</label>
@@ -105,7 +116,6 @@ export function Login() {
                     )
                     }}
                 </Formik>
-
 
                 <a href="/language-selection" className="text-center flex-2 underline">
                   {t('login.changeLanguage')}

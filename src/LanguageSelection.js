@@ -1,13 +1,11 @@
 import { useState  } from 'react'
 import { useTranslation } from 'react-i18next';
-import { useNavigate } from "react-router-dom";
 import Select from 'react-select'
 
 export const LanguageSelection = () => {
 
     const [ language, changeLanguage ] = useState('en')
     const { t, i18n } = useTranslation();
-    let navigate = useNavigate();
 
     const options = [
         { value: 'en', label: 'English' },
@@ -31,7 +29,7 @@ export const LanguageSelection = () => {
                         className="w-full py-3 mt-10 bg-gray-800 rounded-sm
                         font-medium text-white uppercase
                         focus:outline-none hover:bg-gray-700 hover:shadow-none"
-                        onClick={() => navigate("/")}
+                        onClick={() => window.location.replace('/')}
                         >
                         {t('languageSelection.confirm')}
                     </button>
