@@ -4,6 +4,7 @@ import { LanguageSelection } from './LanguageSelection';
 import { Dashboard } from './Dashboard';
 import { AuthProvider } from './contexts/AuthProvider';
 import { RequireAuth } from './RequireAuth';
+import { Register } from './Register';
 
 export const AppRoutes = () => {
   return (
@@ -12,6 +13,7 @@ export const AppRoutes = () => {
         <Routes>
           <Route path='/' element={<Login />} />
           <Route path='/login' element={<Login />} />
+          <Route path='/register' element={<Register />} />
           <Route path='/language-selection' element={<LanguageSelection />} />
           <Route
             path='/dashboard'

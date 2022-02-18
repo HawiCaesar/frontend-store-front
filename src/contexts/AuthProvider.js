@@ -1,28 +1,7 @@
 import { useCallback, useMemo, useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { AuthContext } from './AuthContext';
-import axios from 'axios';
-
-const postResource = (path, data, requestOptions) =>
-  axios
-    .post(`http://localhost:4001${path}`, data, requestOptions)
-    .then((response) => response.data);
-
-const getResource = (path, requestOptions) =>
-  axios
-    .get(`http://localhost:4001${path}`, requestOptions)
-    .then((response) => response.data);
-
-const Options = (user) => {
-  const hasToken =
-    Object.keys(user).length === 0 && user.hasOwnProperty('token');
-  return {
-    headers: {
-      'Accept-Language': user.language,
-      ...(hasToken ? { [`x-access-token`]: user?.token } : {})
-    }
-  };
-};
+import { postResource, getResource, Options } from '../apiHelpers';
 
 export const AuthProvider = ({ children }) => {
   const { i18n } = useTranslation();
@@ -30,7 +9,7 @@ export const AuthProvider = ({ children }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const requestOptions = useMemo(
-    () => ({ ...Options({ language: i18n.language, ...user }) }),
+    () => ({ ...Options({ language: i18n.language, user }) }),
     [user, i18n]
   );
 

@@ -1,29 +1,47 @@
 {
-    "appLoading": "The app is loading",
-    "buttons": {
-        "ok": "ok"
-    },
-    "languageSelection": {
-        "selectPrompt": "Select your language",
-        "select": "Select",
-        "confirm": "Confirm Selection"
-    },
-    "login": {
-        "createAccount": "Create an account",
-        "changeLanguage": "Change Language",
-        "forgotPassword": "Forgot Password?",
-        "or": "or",
-        "input": {      
-            "email": "Email",
-            "password": "Password",
-            "login": "Login"
-        },
-        "validations": {
-          "email": {
-            "required": "Email Requried",
-            "invalid": "Invalid email address"
-          },
-          "password": "Password required"
-        }
+  "appLoading": "The app is loading",
+  "buttons": {
+    "login": "Login",
+    "ok": "ok",
+    "register": "Register"
+  },
+  "labels": {
+    "input": {
+      "email": "Email",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "password": "Password"
     }
+  },
+  "languageSelection": {
+    "selectPrompt": "Select your language",
+    "select": "Select",
+    "confirm": "Confirm Selection"
+  },
+  "login": {
+    "createAccount": "Create an account",
+    "changeLanguage": "Change Language",
+    "forgotPassword": "Forgot Password?",
+    "or": "or",
+    "validations": {
+      "email": {
+        "required": "Email Requried",
+        "invalid": "Invalid email address"
+      },
+      "password": "Password required"
+    },
+    "title": "Login"
+  },
+  "register": {
+    "title": "Register",
+    "validations": {
+      "email": {
+        "required": "Email Requried",
+        "invalid": "Invalid email address"
+      },
+      "firstName": "First name is required",
+      "lastName": "Last name is required",
+      "password": "Password required"
+    }
+  }
 }

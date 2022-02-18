@@ -2,13 +2,26 @@ import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
 import './main.css';
 import { AppRoutes } from './AppRoutes';
+import { ToastContainer } from 'react-toastify';
 import './i18n';
 import reportWebVitals from './reportWebVitals';
+import 'react-toastify/dist/ReactToastify.min.css';
 
 ReactDOM.render(
   <React.StrictMode>
     <Suspense fallback='Store Front'>
       <AppRoutes />
+      <ToastContainer
+        position='top-right'
+        autoClose={2000}
+        hideProgressBar
+        newestOnTop
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </Suspense>
   </React.StrictMode>,
   document.getElementById('root')

@@ -1,14 +1,12 @@
-import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Formik } from 'formik';
-import { AuthContext } from './contexts/AuthContext';
+import { Options, postResource } from './apiHelpers';
 import { showAlert } from './contexts/toastHelper';
 
-export function Login() {
+export const Register = () => {
   const navigate = useNavigate();
-  const { t } = useTranslation();
-  const { login } = useContext(AuthContext);
+  const { t, i18n } = useTranslation();
 
   return (
     <div className='flex flex-col h-screen bg-gray-100'>
@@ -19,13 +17,28 @@ export function Login() {
                 bg-white rounded-lg shadow-md lg:shadow-lg'
         >
           <h2 className='text-center font-semibold text-3xl lg:text-4xl text-gray-800'>
-            {t('login.title')}
+            {t('register.title')}
           </h2>
 
           <Formik
-            initialValues={{ email: '', password: '' }}
+            initialValues={{
+              first_name: '',
+              last_name: '',
+              email: '',
+              password: ''
+            }}
             validate={(values) => {
               const errors = {};
+
+              /* POINT TO COMMENT OUT*/
+              if (!values.first_name) {
+                errors.first_name = t('register.validations.firstName');
+              }
+              if (!values.last_name) {
+                errors.last_name = t('register.validations.lastName');
+              }
+              /* END --------- POINT TO COMMENT OUT*/
+
               if (!values.email) {
                 errors.email = t('login.validations.email.required');
               } else if (
@@ -40,15 +53,21 @@ export function Login() {
               return errors;
             }}
             onSubmit={async (values, { setSubmitting }) => {
-              const response = await login(values);
-
-              if (!response.errorMessage) {
-                return navigate('/dashboard');
+              console.log(values);
+              try {
+                const response = await postResource(
+                  '/register',
+                  values,
+                  Options({ language: i18n.language })
+                );
+                if (response._id) {
+                  console.log('DONE REGISTERING');
+                  navigate('/login');
+                }
+              } catch (error) {
+                showAlert('error', error.response.data.errorMessage);
+                setSubmitting(false);
               }
-
-              showAlert('error', response.errorMessage);
-
-              setSubmitting(false);
             }}
           >
             {({
@@ -64,8 +83,58 @@ export function Login() {
               return (
                 <form className='mt-10' onSubmit={handleSubmit}>
                   <label
-                    htmlFor='email'
+                    htmlFor='firstName'
                     className='block text-xs font-semibold text-gray-600 uppercase'
+                  >
+                    {t('labels.input.firstName')}
+                  </label>
+                  <input
+                    id='firstName'
+                    type='text'
+                    name='first_name'
+                    placeholder={t('labels.input.firstName')}
+                    autoComplete='off'
+                    className='block w-full py-3 px-1 mt-2 
+                                text-gray-800 appearance-none 
+                                border-b-2 border-gray-100
+                                focus:text-gray-500 focus:outline-none focus:border-gray-200'
+                    onBlur={handleBlur}
+                    onChange={handleChange}
+                    value={values.firstName}
+                  />
+                  <span className='text-red-400'>
+                    {errors.first_name &&
+                      touched.first_name &&
+                      errors.first_name}
+                  </span>
+
+                  <label
+                    htmlFor='lastName'
+                    className='block mt-2 text-xs font-semibold text-gray-600 uppercase'
+                  >
+                    {t('labels.input.lastName')}
+                  </label>
+                  <input
+                    id='lastName'
+                    type='text'
+                    name='last_name'
+                    placeholder={t('labels.input.lastName')}
+                    autoComplete='off'
+                    className='block w-full py-3 px-1 mt-2 
+                                text-gray-800 appearance-none 
+                                border-b-2 border-gray-100
+                                focus:text-gray-500 focus:outline-none focus:border-gray-200'
+                    onBlur={handleBlur}
+                    onChange={handleChange}
+                    value={values.last_name}
+                  />
+                  <span className='text-red-400'>
+                    {errors.last_name && touched.last_name && errors.last_name}
+                  </span>
+
+                  <label
+                    htmlFor='email'
+                    className='block mt-2 text-xs font-semibold text-gray-600 uppercase'
                   >
                     {t('labels.input.email')}
                   </label>
@@ -121,33 +190,12 @@ export function Login() {
                   >
                     {t('buttons.login')}
                   </button>
-
-                  <div className='sm:flex sm:flex-wrap mt-8 sm:mb-4 text-sm text-center'>
-                    <a href='forgot-password' className='flex-2 underline'>
-                      {t('login.forgotPassword')}
-                    </a>
-
-                    <p className='flex-1 text-gray-500 text-md mx-4 my-1 sm:my-auto'>
-                      {t('login.or')}
-                    </p>
-
-                    <a href='/register' className='flex-2 underline'>
-                      {t('login.createAccount')}
-                    </a>
-                  </div>
                 </form>
               );
             }}
           </Formik>
-
-          <a
-            href='/language-selection'
-            className='text-center flex-2 underline'
-          >
-            {t('login.changeLanguage')}
-          </a>
         </div>
       </div>
     </div>
   );
-}
+};

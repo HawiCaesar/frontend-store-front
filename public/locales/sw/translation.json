@@ -1,29 +1,47 @@
 {
-    "appLoading": "Programu inapakia",
-    "buttons": {
-        "ok": "Sawa"
-    },
-    "languageSelection": {
-        "selectPrompt": "Chagua lugha yako",
-        "select": "Chagua",
-        "confirm": "Thibitisha uteuzi"
-    },
-    "login": {
-        "createAccount": "Fungua akaunti",
-        "changeLanguage": "Badilisha Lugha",
-        "forgotPassword": "Umesahau nywila?",
-        "or": "ama",
-        "input": {      
-            "email": "Barua Pepe",
-            "password": "Nenosiri",
-            "login": "Ingia"
-        },
-        "validations": {
-            "email": {
-                "required": "Barua pepe Inahitajika",
-                "invalid": "Anwani ya barua pepe si sahihi"
-            },
-            "password": "Nenosiri linahitajika"
-          }
+  "appLoading": "Programu inapakia",
+  "buttons": {
+    "login": "Ingia",
+    "ok": "Sawa",
+    "Register": "Kujiandikisha"
+  },
+  "labels": {
+    "input": {
+      "email": "Barua Pepe",
+      "firstName": "Jina la kwanza",
+      "lastName": "Jina la familia",
+      "password": "Nenosiri"
     }
+  },
+  "languageSelection": {
+    "selectPrompt": "Chagua lugha yako",
+    "select": "Chagua",
+    "confirm": "Thibitisha uteuzi"
+  },
+  "login": {
+    "createAccount": "Fungua akaunti",
+    "changeLanguage": "Badilisha Lugha",
+    "forgotPassword": "Umesahau nywila?",
+    "or": "ama",
+    "validations": {
+      "email": {
+        "required": "Barua pepe Inahitajika",
+        "invalid": "Anwani ya barua pepe si sahihi"
+      },
+      "password": "Nenosiri linahitajika"
+    },
+    "title": "Ingia"
+  },
+  "register": {
+    "title": "Kujiandikisha",
+    "validations": {
+      "email": {
+        "required": "Barua pepe Inahitajika",
+        "invalid": "Anwani ya barua pepe si sahihi"
+      },
+      "firstName": "Jina la kwanza linahitajika",
+      "lastName": "Jina la familia linahitajika",
+      "password": "Nenosiri linahitajika"
+    }
+  }
 }
