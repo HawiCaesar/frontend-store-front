@@ -6,10 +6,12 @@ import { ToastContainer } from 'react-toastify';
 import './i18n';
 import reportWebVitals from './reportWebVitals';
 import 'react-toastify/dist/ReactToastify.min.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import 'main.css';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Suspense fallback='Store Front'>
+    <Suspense fallback='...'>
       <AppRoutes />
       <ToastContainer
         position='top-right'

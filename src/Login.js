@@ -43,7 +43,7 @@ export function Login() {
               const response = await login(values);
 
               if (!response.errorMessage) {
-                return navigate('/dashboard');
+                return navigate('/admin');
               }
 
               showAlert('error', response.errorMessage);
