@@ -5,6 +5,7 @@ import {
   Route,
   Navigate
 } from 'react-router-dom';
+import pseudoLocalization from 'pseudo-localization';
 import { Login } from './Login';
 import { LanguageSelection } from './LanguageSelection';
 import { AuthProvider } from './contexts/AuthProvider';
@@ -19,6 +20,7 @@ import FooterAdmin from 'components/Footers/FooterAdmin.js';
 import Settings from 'views/admin/Settings.js';
 import Dashboard from 'views/admin/Dashboard';
 import Tables from 'views/admin/Tables.js';
+import Concatenation from 'views/admin/Concatenation';
 
 const NavElements = ({ children }) => {
   return (
@@ -36,7 +38,18 @@ const NavElements = ({ children }) => {
   );
 };
 
+function PseudoLocalization() {
+  React.useEffect(() => {
+    pseudoLocalization.start();
+
+    return () => {
+      pseudoLocalization.stop();
+    };
+  }, []);
+}
+
 export const AppRoutes = () => {
+  PseudoLocalization();
   return (
     <Router>
       <AuthProvider>
@@ -79,6 +92,17 @@ export const AppRoutes = () => {
                 <RequireAuth>
                   <NavElements>
                     <Tables />
+                  </NavElements>
+                </RequireAuth>
+              }
+            />
+
+            <Route
+              path='/admin/concatenation'
+              element={
+                <RequireAuth>
+                  <NavElements>
+                    <Concatenation />
                   </NavElements>
                 </RequireAuth>
               }
