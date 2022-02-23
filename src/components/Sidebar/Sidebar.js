@@ -143,14 +143,15 @@ export default function Sidebar() {
                   className='text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block'
                   to='/admin/concatenation'
                 >
-                  Concatenation issues
+                  <i className='fas fa-clipboard-list text-blueGray-300 mr-2 text-sm'></i>{' '}
+                  Concatenation
                 </Link>
               </li>
 
               <li className='items-center'>
                 <Link
                   className='text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block'
-                  to='/auth/register'
+                  to='/admin/casing'
                 >
                   <i className='fas fa-clipboard-list text-blueGray-300 mr-2 text-sm'></i>{' '}
                   Casing
@@ -160,7 +161,7 @@ export default function Sidebar() {
               <li className='items-center'>
                 <Link
                   className='text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block'
-                  to='/auth/register'
+                  to='/admin/styling-issues'
                 >
                   <i className='fas fa-clipboard-list text-blueGray-300 mr-2 text-sm'></i>{' '}
                   CSS
@@ -169,7 +170,7 @@ export default function Sidebar() {
               <li className='items-center'>
                 <Link
                   className='text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block'
-                  to='/auth/register'
+                  to='/admin/datetime-issues'
                 >
                   <i className='fas fa-clipboard-list text-blueGray-300 mr-2 text-sm'></i>{' '}
                   Localizing dates, numbers

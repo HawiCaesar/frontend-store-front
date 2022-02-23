@@ -21,6 +21,9 @@ import Settings from 'views/admin/Settings.js';
 import Dashboard from 'views/admin/Dashboard';
 import Tables from 'views/admin/Tables.js';
 import Concatenation from 'views/admin/Concatenation';
+import Casing from 'views/admin/Casing';
+import StylingIssues from 'views/admin/StylingIssues';
+import DateTimeIssues from 'views/admin/DateTimeIssues';
 
 const NavElements = ({ children }) => {
   return (
@@ -49,7 +52,7 @@ function PseudoLocalization() {
 }
 
 export const AppRoutes = () => {
-  PseudoLocalization();
+  //PseudoLocalization();
   return (
     <Router>
       <AuthProvider>
@@ -103,6 +106,38 @@ export const AppRoutes = () => {
                 <RequireAuth>
                   <NavElements>
                     <Concatenation />
+                  </NavElements>
+                </RequireAuth>
+              }
+            />
+
+            <Route
+              path='/admin/casing'
+              element={
+                <RequireAuth>
+                  <NavElements>
+                    <Casing />
+                  </NavElements>
+                </RequireAuth>
+              }
+            />
+            <Route
+              path='/admin/styling-issues'
+              element={
+                <RequireAuth>
+                  <NavElements>
+                    <StylingIssues />
+                  </NavElements>
+                </RequireAuth>
+              }
+            />
+
+            <Route
+              path='/admin/datetime-issues'
+              element={
+                <RequireAuth>
+                  <NavElements>
+                    <DateTimeIssues />
                   </NavElements>
                 </RequireAuth>
               }

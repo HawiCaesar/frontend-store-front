@@ -63,7 +63,7 @@ const UserDropdown = () => {
             handleLogout();
           }}
         >
-          Action
+          Logout
         </a>
       </div>
     </>

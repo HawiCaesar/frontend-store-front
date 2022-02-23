@@ -1,9 +1,7 @@
+import { showAlert } from 'contexts/toastHelper';
 import React from 'react';
-import { AuthContext } from 'contexts/AuthContext';
 
-export default function Concatenation() {
-  const [count, setCount] = React.useState(0);
-  const { user } = React.useContext(AuthContext);
+export default function StylingIssues() {
   return (
     <>
       <div className='flex flex-wrap mt-4'>
@@ -21,20 +19,22 @@ export default function Concatenation() {
                       'font-semibold text-lg text-blueGray-700 text-white'
                     }
                   >
-                    Concatenation issues
+                    Styling issues
                   </h3>
                 </div>
                 <div className='block px-4 w-full overflow-x-auto'>
                   <button
-                    onClick={() => setCount((count) => count + 1)}
-                    className='bg-lightBlue-500 text-white active:bg-lightBlue-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 ease-linear transition-all duration-150'
+                    onClick={() =>
+                      showAlert(
+                        'error',
+                        'This a notificaton telling the user that they have successfully deactivated a user. This is a repeated notificaton telling the user that they have successfully deactivated a user'
+                      )
+                    }
+                    className='bg-lightBlue-500 text-white active:bg-lightBlue-600 w-20 px-4 py-2 font-bold text-xs rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 ease-linear transition-all duration-150'
                     type='button'
                   >
-                    Click to update
+                    What's bothering you?
                   </button>
-                  <p>
-                    {user.first_name} changed this sentence {count} times
-                  </p>
                 </div>
               </div>
             </div>
