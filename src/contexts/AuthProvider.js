@@ -1,16 +1,26 @@
 import { useCallback, useMemo, useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { AuthContext } from './AuthContext';
-import { postResource, getResource, Options } from '../apiHelpers';
+import { postResource, getResource, Options, Cookie } from '../apiHelpers';
 
 export const AuthProvider = ({ children }) => {
   const { i18n } = useTranslation();
   const [user, setUser] = useState({});
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
+  const calcluatedUser = useMemo(
+    () =>
+      user.token
+        ? user
+        : Cookie.get('user')
+        ? JSON.parse(Cookie.get('user'))
+        : {},
+    [user]
+  );
+
   const requestOptions = useMemo(
-    () => ({ ...Options({ language: i18n.language, user }) }),
-    [user, i18n]
+    () => ({ ...Options({ language: i18n.language, user: calcluatedUser }) }),
+    [i18n, calcluatedUser]
   );
 
   const login = useCallback(
@@ -20,6 +30,12 @@ export const AuthProvider = ({ children }) => {
 
         setUser(() => authUser);
         setIsLoggedIn(true);
+
+        Cookie.set('user', JSON.stringify(authUser), {
+          path: '/',
+          days: 1
+        });
+
         return authUser;
       } catch (error) {
         return error.response.data;
@@ -31,14 +47,18 @@ export const AuthProvider = ({ children }) => {
   const logout = useCallback(async () => {
     setUser({});
     setIsLoggedIn(false);
+    Cookie.delete('user');
   }, [setUser, setIsLoggedIn]);
 
   const accountCheck = useCallback(async () => {
     try {
       const { loggedIn } = await getResource('/status', requestOptions);
-      setIsLoggedIn(loggedIn);
+      if (!loggedIn || Cookie.get('user')) {
+        setIsLoggedIn(true);
+      }
     } catch (error) {
       setIsLoggedIn(false);
+      Cookie.delete('user');
     }
   }, [setIsLoggedIn, requestOptions]);
 

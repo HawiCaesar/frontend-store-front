@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Formik } from 'formik';
 import { Options, postResource } from './apiHelpers';
-import { showAlert } from './contexts/toastHelper';
+import { showAlert } from './toastHelper';
 
 export const Register = () => {
   const navigate = useNavigate();

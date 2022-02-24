@@ -6,8 +6,8 @@ import {
   Navigate
 } from 'react-router-dom';
 import pseudoLocalization from 'pseudo-localization';
-import { Login } from './Login';
-import { LanguageSelection } from './LanguageSelection';
+import { Login } from './views/Login';
+import { LanguageSelection } from './views/LanguageSelection';
 import { AuthProvider } from './contexts/AuthProvider';
 import { RequireAuth } from './RequireAuth';
 import { Register } from './Register';

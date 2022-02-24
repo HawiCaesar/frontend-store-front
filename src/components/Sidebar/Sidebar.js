@@ -4,9 +4,11 @@ import { Link } from 'react-router-dom';
 
 import NotificationDropdown from 'components/Dropdowns/NotificationDropdown.js';
 import UserDropdown from 'components/Dropdowns/UserDropdown.js';
+import { useTranslation } from 'react-i18next';
 
 export default function Sidebar() {
   const [collapseShow, setCollapseShow] = React.useState('hidden');
+  const { t } = useTranslation();
   return (
     <>
       <nav className='md:left-0 md:block md:fixed md:top-0 md:bottom-0 md:overflow-y-auto md:flex-row md:flex-nowrap md:overflow-hidden shadow-xl bg-white flex flex-wrap items-center justify-between relative md:w-64 z-10 py-4 px-6'>
@@ -21,7 +23,7 @@ export default function Sidebar() {
           </button>
           {/* Brand */}
           <Link
-            className='md:block text-left md:pb-2 text-blueGray-600 mr-0 inline-block whitespace-nowrap text-sm uppercase font-bold p-4 px-0'
+            className='md:block text-left md:pb-2 text-blueGray-600 mr-0 inline-block whitespace-nowrap text-sm font-bold p-4 px-0'
             to='/'
           >
             Notus React
@@ -47,7 +49,7 @@ export default function Sidebar() {
               <div className='flex flex-wrap'>
                 <div className='w-6/12'>
                   <Link
-                    className='md:block text-left md:pb-2 text-blueGray-600 mr-0 inline-block whitespace-nowrap text-sm uppercase font-bold p-4 px-0'
+                    className='md:block text-left md:pb-2 text-blueGray-600 mr-0 inline-block whitespace-nowrap text-sm font-bold p-4 px-0'
                     to='/'
                   >
                     Notus React
@@ -78,8 +80,8 @@ export default function Sidebar() {
             {/* Divider */}
             <hr className='my-4 md:min-w-full' />
             {/* Heading */}
-            <h6 className='md:min-w-full text-blueGray-500 text-xs uppercase font-bold block pt-1 pb-4 no-underline'>
-              Admin Layout
+            <h6 className='md:min-w-full text-blueGray-500 text-xs font-bold block pt-1 pb-4 no-underline'>
+              {t('sidebar.admin.adminTitle')}
             </h6>
             {/* Navigation */}
 
@@ -87,7 +89,7 @@ export default function Sidebar() {
               <li className='items-center'>
                 <Link
                   className={
-                    'text-xs uppercase py-3 font-bold block ' +
+                    'text-xs py-3 font-bold block ' +
                     (window.location.href.indexOf('/admin/dashboard') !== -1
                       ? 'text-lightBlue-500 hover:text-lightBlue-600'
                       : 'text-blueGray-700 hover:text-blueGray-500')
@@ -102,14 +104,14 @@ export default function Sidebar() {
                         : 'text-blueGray-300')
                     }
                   ></i>{' '}
-                  Dashboard
+                  {t('sidebar.admin.dashboardLink')}
                 </Link>
               </li>
 
               <li className='items-center'>
                 <Link
                   className={
-                    'text-xs uppercase py-3 font-bold block ' +
+                    'text-xs py-3 font-bold block ' +
                     (window.location.href.indexOf('/admin/settings') !== -1
                       ? 'text-lightBlue-500 hover:text-lightBlue-600'
                       : 'text-blueGray-700 hover:text-blueGray-500')
@@ -124,7 +126,7 @@ export default function Sidebar() {
                         : 'text-blueGray-300')
                     }
                   ></i>{' '}
-                  Settings
+                  {t('sidebar.admin.settingsLink')}
                 </Link>
               </li>
             </ul>
@@ -132,48 +134,48 @@ export default function Sidebar() {
             {/* Divider */}
             <hr className='my-4 md:min-w-full' />
             {/* Heading */}
-            <h6 className='md:min-w-full text-blueGray-500 text-xs uppercase font-bold block pt-1 pb-4 no-underline'>
-              Some common problem patterns
+            <h6 className='md:min-w-full text-blueGray-500 text-xs font-bold block pt-1 pb-4 no-underline'>
+              {t('sidebar.commonIssues.title')}
             </h6>
             {/* Navigation */}
 
             <ul className='md:flex-col md:min-w-full flex flex-col list-none md:mb-4'>
               <li className='items-center'>
                 <Link
-                  className='text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block'
+                  className='text-blueGray-700 hover:text-blueGray-500 text-xs py-3 font-bold block'
                   to='/admin/concatenation'
                 >
                   <i className='fas fa-clipboard-list text-blueGray-300 mr-2 text-sm'></i>{' '}
-                  Concatenation
+                  {t('sidebar.commonIssues.concatenation')}
                 </Link>
               </li>
 
               <li className='items-center'>
                 <Link
-                  className='text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block'
+                  className='text-blueGray-700 hover:text-blueGray-500 text-xs py-3 font-bold block'
                   to='/admin/casing'
                 >
                   <i className='fas fa-clipboard-list text-blueGray-300 mr-2 text-sm'></i>{' '}
-                  Casing
+                  {t('sidebar.commonIssues.casingLink')}
                 </Link>
               </li>
 
               <li className='items-center'>
                 <Link
-                  className='text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block'
+                  className='text-blueGray-700 hover:text-blueGray-500 text-xs py-3 font-bold block'
                   to='/admin/styling-issues'
                 >
                   <i className='fas fa-clipboard-list text-blueGray-300 mr-2 text-sm'></i>{' '}
-                  CSS
+                  {t('sidebar.commonIssues.cssLink')}
                 </Link>
               </li>
               <li className='items-center'>
                 <Link
-                  className='text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block'
+                  className='text-blueGray-700 hover:text-blueGray-500 text-xs py-3 font-bold block'
                   to='/admin/datetime-issues'
                 >
                   <i className='fas fa-clipboard-list text-blueGray-300 mr-2 text-sm'></i>{' '}
-                  Localizing dates, numbers
+                  {t('sidebar.commonIssues.localizeDates')}
                 </Link>
               </li>
             </ul>

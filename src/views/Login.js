@@ -2,8 +2,8 @@ import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Formik } from 'formik';
-import { AuthContext } from './contexts/AuthContext';
-import { showAlert } from './contexts/toastHelper';
+import { AuthContext } from '../contexts/AuthContext';
+import { showAlert } from '../toastHelper';
 
 export function Login() {
   const navigate = useNavigate();

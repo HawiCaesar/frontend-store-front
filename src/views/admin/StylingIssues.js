@@ -1,5 +1,5 @@
-import { showAlert } from 'contexts/toastHelper';
 import React from 'react';
+import { showAlert } from 'toastHelper';
 
 export default function StylingIssues() {
   return (

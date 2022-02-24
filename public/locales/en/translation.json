@@ -3,7 +3,55 @@
   "buttons": {
     "login": "Login",
     "ok": "ok",
-    "register": "Register"
+    "register": "Register",
+    "seeAll": "SEE ALL"
+  },
+  "dashboard": {
+    "charts": {
+      "lineChart": {
+        "lowerTitle": "Overview",
+        "higherTitle": "Sales value"
+      },
+      "barChart": {
+        "lowerTitle": "Performance",
+        "higherTitle": "Total orders"
+      }
+    },
+    "pageVisits": {
+      "table": {
+        "pageName": "PAGE NAME",
+        "visitors": "VISITORS",
+        "uniqueVisitors": "UNIQUE VISITORS",
+        "bounceRate": "BOUNCE RATE"
+      },
+      "title": "Page Visitors"
+    },
+    "socialTraffic": {
+      "table": {
+        "referrals": "REFERRALS",
+        "visitors": "VISITORS"
+      }
+    },
+    "stats": {
+      "trafficCard": {
+        "traffic": "TRAFFIC"
+      },
+      "newUsersCard": {
+        "newUsers": "NEW USERS"
+      },
+      "salesCard": {
+        "sales": "SALES"
+      },
+      "performanceCard": {
+        "performance": "PERFORMANCE"
+      }
+    }
+  },
+  "footer": {
+    "about": "About Us",
+    "blog": "Blog",
+    "copyright": "Copyright",
+    "license": "MIT License"
   },
   "labels": {
     "input": {
@@ -42,6 +90,20 @@
       "firstName": "First name is required",
       "lastName": "Last name is required",
       "password": "Password required"
+    }
+  },
+  "sidebar": {
+    "admin": {
+      "adminTitle": "ADMINISTRATOR",
+      "dashboardLink": "DASHBOARD",
+      "settingsLink": "SETTINGS"
+    },
+    "commonIssues": {
+      "concatenation": "CONCATENATION",
+      "casingLink": "CASING",
+      "cssLink": "CSS",
+      "localizeDates": "LOCALIZING DATES, NUMBERS",
+      "title": "SOME COMMON PROBLEM PATTERNS"
     }
   }
 }

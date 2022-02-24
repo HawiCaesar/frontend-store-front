@@ -3,7 +3,55 @@
   "buttons": {
     "login": "Ingia",
     "ok": "Sawa",
-    "Register": "Kujiandikisha"
+    "Register": "Kujiandikisha",
+    "seeAll": "ONA YOTE"
+  },
+  "dashboard": {
+    "charts": {
+      "lineChart": {
+        "lowerTitle": "Muhtasari",
+        "higherTitle": "Thamani ya mauzo"
+      },
+      "barChart": {
+        "lowerTitle": "Utendaji",
+        "higherTitle": "Jumla ya maagizo"
+      }
+    },
+    "pageVisits": {
+      "table": {
+        "pageName": "JINA LA UKURASA",
+        "visitors": "WAGENI",
+        "uniqueVisitors": "WAGENI WA KIPEKEE",
+        "bounceRate": "KIWANGO CHA BOUNCE"
+      },
+      "title": "Wanaotembelea Ukurasa"
+    },
+    "socialTraffic": {
+      "table": {
+        "referrals": "MAPELEKEZO",
+        "visitors": "WAGENI"
+      }
+    },
+    "stats": {
+      "trafficCard": {
+        "traffic": "TRAFIKI"
+      },
+      "newUsersCard": {
+        "newUsers": "WATUMIAJI WAPYA"
+      },
+      "salesCard": {
+        "sales": "MAUZO"
+      },
+      "performanceCard": {
+        "performance": "UTENDAJI"
+      }
+    }
+  },
+  "footer": {
+    "about": "Kuhusu sisi",
+    "blog": "Blogu",
+    "copyright": "Hakimiliki",
+    "license": "Leseni ya MIT"
   },
   "labels": {
     "input": {
@@ -42,6 +90,19 @@
       "firstName": "Jina la kwanza linahitajika",
       "lastName": "Jina la familia linahitajika",
       "password": "Nenosiri linahitajika"
+    }
+  },
+  "sidebar": {
+    "admin": {
+      "adminTitle": "MSIMAMIZI",
+      "dashboardLink": "DASHBODI",
+      "settingsLink": "MIPANGILIO"
+    },
+    "commonIssues": {
+      "concatenation": "KUUNGANISHA",
+      "casingLink": "HERUFI",
+      "cssLink": "CSS",
+      "localizeDates": "KUJANIBISHA TAREHE, NAMBARI"
     }
   }
 }
