@@ -31,6 +31,11 @@ export const AuthProvider = ({ children }) => {
         setUser(() => authUser);
         setIsLoggedIn(true);
 
+        /**
+         * This is done for example purposes
+         *
+         * Ideally httpOnly should be done from the server
+         */
         Cookie.set('user', JSON.stringify(authUser), {
           path: '/',
           days: 1
