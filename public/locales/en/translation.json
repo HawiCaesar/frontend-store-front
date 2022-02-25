@@ -4,7 +4,8 @@
     "login": "Login",
     "ok": "ok",
     "register": "Register",
-    "seeAll": "SEE ALL"
+    "seeAll": "SEE ALL",
+    "settings": "SETTINGS"
   },
   "dashboard": {
     "charts": {
@@ -30,7 +31,8 @@
       "table": {
         "referrals": "REFERRALS",
         "visitors": "VISITORS"
-      }
+      },
+      "title": "Social Traffic"
     },
     "stats": {
       "trafficCard": {
@@ -80,6 +82,11 @@
     },
     "title": "Login"
   },
+  "profile": {
+    "friends": "Friends",
+    "photos": "Photos",
+    "comments": "Comments"
+  },
   "register": {
     "title": "Register",
     "validations": {
@@ -105,5 +112,20 @@
       "localizeDates": "LOCALIZING DATES, NUMBERS",
       "title": "SOME COMMON PROBLEM PATTERNS"
     }
+  },
+  "settings": {
+    "forms": {
+      "aboutMe": "About me",
+      "userInfo": {
+        "inputs": {
+          "email": "EMAIL ADDRESS",
+          "username": "USERNAME",
+          "firstName": "FIRST NAME",
+          "lastName": "LAST NAME"
+        },
+        "title": "USER INFORMATION"
+      }
+    },
+    "settingTitle": "My account"
   }
 }
