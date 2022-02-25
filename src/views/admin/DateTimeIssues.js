@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import DatePicker from 'react-datepicker';
 import enGBLocaleData from 'date-fns/locale/en-GB';
+import fr from 'date-fns/locale/fr';
+import enUS from 'date-fns/locale/en-US';
 
 import 'react-datepicker/dist/react-datepicker.css';
 
@@ -20,8 +22,8 @@ export default function DateTimeIssues() {
   const { i18n } = useTranslation();
 
   const [startDate, setStartDate] = useState(new Date());
-
   const [importedLocale, setImportedLocale] = useState(enGBLocaleData);
+  console.log(importedLocale, '&&&&&');
 
   useEffect(() => {
     importDateFNSLocale(datePickerMap[i18n.language])
@@ -59,10 +61,11 @@ export default function DateTimeIssues() {
                     Localizing date and time
                   </h3>
                 </div>
-                <div className='block px-4 w-full overflow-x-auto'>
+                <div className='block my-10 px-4 w-full overflow-x-auto'>
                   <p>Correctly localized example:</p>
                   <p>{localizedDateTime}</p>
 
+                  <p className='py-2'>Localized date lib based on i18n</p>
                   <DatePicker
                     selected={startDate}
                     onChange={(date) => setStartDate(date)}
@@ -70,6 +73,28 @@ export default function DateTimeIssues() {
                       width: 'short'
                     })}
                     locale={importedLocale}
+                  />
+                </div>
+                <div className='block my-10 px-4 w-full overflow-x-auto'>
+                  <p className='py-2'>English (US) calendar</p>
+                  <DatePicker
+                    selected={startDate}
+                    onChange={(date) => setStartDate(date)}
+                    dateFormat={enUS?.formatLong?.date({
+                      width: 'short'
+                    })}
+                    locale={enUS}
+                  />
+                </div>
+                <div className='block my-10 px-4 w-full overflow-x-auto'>
+                  <p className='py-2'>French Calendar</p>
+                  <DatePicker
+                    selected={startDate}
+                    onChange={(date) => setStartDate(date)}
+                    dateFormat={fr?.formatLong?.date({
+                      width: 'short'
+                    })}
+                    locale={fr}
                   />
                 </div>
               </div>
