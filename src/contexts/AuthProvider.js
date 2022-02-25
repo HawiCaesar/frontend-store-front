@@ -63,7 +63,7 @@ export const AuthProvider = ({ children }) => {
       }
     } catch (error) {
       setIsLoggedIn(false);
-      Cookie.delete('user');
+      delete document.cookie.user;
     }
   }, [setIsLoggedIn, requestOptions]);
 
