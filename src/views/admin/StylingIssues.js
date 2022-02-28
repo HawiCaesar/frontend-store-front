@@ -33,7 +33,7 @@ export default function StylingIssues() {
                     className='bg-lightBlue-500 text-white active:bg-lightBlue-600 w-20 px-4 py-2 font-bold text-xs rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 ease-linear transition-all duration-150'
                     type='button'
                   >
-                    What's bothering you?
+                    What's saddening you?
                   </button>
                 </div>
               </div>

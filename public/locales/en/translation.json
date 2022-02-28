@@ -7,6 +7,12 @@
     "seeAll": "SEE ALL",
     "settings": "SETTINGS"
   },
+  "concatenation": {
+    "button": "Click to update",
+    "changed": "changed this sentence",
+    "times": "times",
+    "title": "Concatenation Issues"
+  },
   "dashboard": {
     "charts": {
       "lineChart": {
@@ -99,20 +105,6 @@
       "password": "Password required"
     }
   },
-  "sidebar": {
-    "admin": {
-      "adminTitle": "ADMINISTRATOR",
-      "dashboardLink": "DASHBOARD",
-      "settingsLink": "SETTINGS"
-    },
-    "commonIssues": {
-      "concatenation": "CONCATENATION",
-      "casingLink": "CASING",
-      "cssLink": "CSS",
-      "localizeDates": "LOCALIZING DATES, NUMBERS",
-      "title": "SOME COMMON PROBLEM PATTERNS"
-    }
-  },
   "settings": {
     "forms": {
       "aboutMe": "About me",
@@ -127,5 +119,23 @@
       }
     },
     "settingTitle": "My account"
+  },
+  "sidebar": {
+    "admin": {
+      "adminTitle": "ADMINISTRATOR",
+      "dashboardLink": "DASHBOARD",
+      "settingsLink": "SETTINGS"
+    },
+    "commonIssues": {
+      "concatenation": "CONCATENATION",
+      "casingLink": "CASING",
+      "cssLink": "CSS",
+      "localizeDates": "LOCALIZING DATES, NUMBERS",
+      "title": "SOME COMMON PROBLEM PATTERNS"
+    }
+  },
+  "styling": {
+    "title": "Styling issues",
+    "saddening": "What's bothering you?"
   }
 }

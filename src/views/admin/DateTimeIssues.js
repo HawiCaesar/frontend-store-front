@@ -23,7 +23,6 @@ export default function DateTimeIssues() {
 
   const [startDate, setStartDate] = useState(new Date());
   const [importedLocale, setImportedLocale] = useState(enGBLocaleData);
-  console.log(importedLocale, '&&&&&');
 
   useEffect(() => {
     importDateFNSLocale(datePickerMap[i18n.language])

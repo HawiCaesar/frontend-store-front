@@ -6,6 +6,12 @@
     "Register": "Kujiandikisha",
     "seeAll": "ONA YOTE"
   },
+  "concatenation": {
+    "button": "Bonyeza ili kusasisha",
+    "changed": "alibadilisha sentensi hii",
+    "times": "mara",
+    "title": "Concatenation Issues"
+  },
   "dashboard": {
     "charts": {
       "lineChart": {
@@ -80,6 +86,11 @@
     },
     "title": "Ingia"
   },
+  "profile": {
+    "friends": "Marafiki",
+    "photos": "Picha",
+    "comments": "Maoni"
+  },
   "register": {
     "title": "Kujiandikisha",
     "validations": {
@@ -91,6 +102,21 @@
       "lastName": "Jina la familia linahitajika",
       "password": "Nenosiri linahitajika"
     }
+  },
+  "settings": {
+    "forms": {
+      "aboutMe": "Kuhusu mimi",
+      "userInfo": {
+        "inputs": {
+          "email": "BARUA PEPE",
+          "username": "JINA LA MTUMIAJI",
+          "firstName": "JINA LA KWANZA",
+          "lastName": "JINA LA FAMILIA"
+        },
+        "title": "HABARI ZA MTUMIAJI"
+      }
+    },
+    "settingTitle": "Akaunti yangu"
   },
   "sidebar": {
     "admin": {
@@ -104,5 +130,9 @@
       "cssLink": "CSS",
       "localizeDates": "KUJANIBISHA TAREHE, NAMBARI"
     }
+  },
+  "styling": {
+    "title": "Masuala ya mitindo",
+    "saddening": "Nini kinakusikitisha?"
   }
 }

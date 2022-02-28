@@ -1,9 +1,11 @@
 import React from 'react';
 import { AuthContext } from 'contexts/AuthContext';
+import { useTranslation } from 'react-i18next';
 
 export default function Concatenation() {
   const [count, setCount] = React.useState(0);
   const { user } = React.useContext(AuthContext);
+  const { t } = useTranslation();
   return (
     <>
       <div className='flex flex-wrap mt-4'>
@@ -21,7 +23,7 @@ export default function Concatenation() {
                       'font-semibold text-lg text-blueGray-700 text-white'
                     }
                   >
-                    Concatenation issues
+                    {t('concatenation.title')}
                   </h3>
                 </div>
                 <div className='block px-4 w-full overflow-x-auto'>
@@ -30,10 +32,11 @@ export default function Concatenation() {
                     className='bg-lightBlue-500 text-white active:bg-lightBlue-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 ease-linear transition-all duration-150'
                     type='button'
                   >
-                    Click to update
+                    {t('concatenation.button')}
                   </button>
                   <p>
-                    {user.first_name} changed this sentence {count} times
+                    {user.first_name} {t('concatenation.changed')} {count}{' '}
+                    {t('concatenation.times')}
                   </p>
                 </div>
               </div>
