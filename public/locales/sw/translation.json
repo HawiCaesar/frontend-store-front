@@ -2,6 +2,7 @@
   "appLoading": "Programu inapakia",
   "buttons": {
     "login": "Ingia",
+    "logout": "Kuondoka",
     "ok": "Sawa",
     "Register": "Kujiandikisha",
     "seeAll": "ONA YOTE"

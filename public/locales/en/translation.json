@@ -2,6 +2,7 @@
   "appLoading": "The app is loading",
   "buttons": {
     "login": "Login",
+    "logout": "Logout",
     "ok": "ok",
     "register": "Register",
     "seeAll": "SEE ALL",

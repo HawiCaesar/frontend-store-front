@@ -2,9 +2,11 @@ import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from 'contexts/AuthContext';
 import { createPopper } from '@popperjs/core';
+import { useTranslation } from 'react-i18next';
 
 const UserDropdown = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
   const { logout } = useContext(AuthContext);
 
   const handleLogout = () => {
@@ -63,7 +65,7 @@ const UserDropdown = () => {
             handleLogout();
           }}
         >
-          Logout
+          {t('buttons.logout')}
         </a>
       </div>
     </>
