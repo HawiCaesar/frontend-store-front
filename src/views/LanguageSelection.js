@@ -3,13 +3,26 @@ import { useTranslation } from 'react-i18next';
 import Select from 'react-select';
 
 export const LanguageSelection = () => {
-  const [language, changeLanguage] = useState('en');
   const { t, i18n } = useTranslation();
+  const [language, changeLanguage] = useState(i18n.language);
+
+  const localeDetails = new Intl.Locale(i18n.language);
+  const displayLanguage = new Intl.DisplayNames([localeDetails.language], {
+    type: 'language'
+  });
 
   const options = [
     { value: 'en', label: 'English' },
     { value: 'sw', label: 'Kiswahili' }
   ];
+
+  const dropdownOptions = () =>
+    options.map((opt) => {
+      return {
+        value: opt.value,
+        label: displayLanguage.of(opt.value)
+      };
+    });
 
   return (
     <div className='flex flex-col h-screen bg-gray-100'>
@@ -24,7 +37,7 @@ export const LanguageSelection = () => {
           <Select
             defaultValue={language}
             placeholder={t('languageSelection.select')}
-            options={options}
+            options={dropdownOptions()}
             onChange={(selected) => {
               i18n.changeLanguage(selected.value);
               changeLanguage(selected.value);
