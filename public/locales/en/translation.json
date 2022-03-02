@@ -1,7 +1,7 @@
 {
   "appLoading": "The app is loading",
   "buttons": {
-    "login": "Login",
+    "login": "LOGIN",
     "logout": "Logout",
     "ok": "ok",
     "register": "Register",

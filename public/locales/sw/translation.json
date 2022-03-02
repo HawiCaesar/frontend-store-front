@@ -1,11 +1,12 @@
 {
   "appLoading": "Programu inapakia",
   "buttons": {
-    "login": "Ingia",
+    "login": "INGIA",
     "logout": "Kuondoka",
     "ok": "Sawa",
-    "Register": "Kujiandikisha",
-    "seeAll": "ONA YOTE"
+    "register": "KUJIANDIKISHA",
+    "seeAll": "ONA YOTE",
+    "settings": "MIPANGILIO"
   },
   "concatenation": {
     "button": "Bonyeza ili kusasisha",

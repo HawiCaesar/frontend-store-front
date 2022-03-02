@@ -10,7 +10,7 @@ import { Login } from './views/Login';
 import { LanguageSelection } from './views/LanguageSelection';
 import { AuthProvider } from './contexts/AuthProvider';
 import { RequireAuth } from './RequireAuth';
-import { Register } from './Register';
+import { Register } from './views/Register';
 
 import AdminNavbar from 'components/Navbars/AdminNavbar.js';
 import Sidebar from 'components/Sidebar/Sidebar.js';

@@ -1,8 +1,8 @@
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Formik } from 'formik';
-import { Options, postResource } from './apiHelpers';
-import { showAlert } from './toastHelper';
+import { Options, postResource } from '../apiHelpers';
+import { showAlert } from '../toastHelper';
 
 export const Register = () => {
   const navigate = useNavigate();
@@ -184,11 +184,11 @@ export const Register = () => {
                   <button
                     type='submit'
                     className='w-full py-3 mt-10 bg-gray-800 rounded-sm
-                                font-medium text-white uppercase
+                                font-medium text-white
                                 focus:outline-none hover:bg-gray-700 hover:shadow-none disabled:opacity-75'
                     disabled={!isValid || !dirty}
                   >
-                    {t('buttons.login')}
+                    {t('buttons.register')}
                   </button>
                 </form>
               );

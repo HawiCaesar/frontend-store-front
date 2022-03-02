@@ -92,7 +92,7 @@ export default function CardSettings() {
             <hr className='mt-6 border-b-1 border-blueGray-300' />
 
             <h6 className='text-blueGray-400 text-sm mt-3 mb-6 font-bold'>
-              About Me
+              {t('settings.forms.aboutMe')}
             </h6>
             <div className='flex flex-wrap'>
               <div className='w-full lg:w-12/12 px-4'>
@@ -101,7 +101,7 @@ export default function CardSettings() {
                     className='block text-blueGray-600 text-xs font-bold mb-2'
                     htmlFor='grid-password'
                   >
-                    About me
+                    {t('settings.forms.aboutMe')}
                   </label>
                   <textarea
                     type='text'
