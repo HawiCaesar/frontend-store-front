@@ -43,13 +43,16 @@
     },
     "stats": {
       "trafficCard": {
-        "traffic": "TRAFFIC"
+        "traffic": "TRAFFIC",
+        "lastMonth": "Since last month"
       },
       "newUsersCard": {
-        "newUsers": "NEW USERS"
+        "newUsers": "NEW USERS",
+        "lastWeek": "Since last week"
       },
       "salesCard": {
-        "sales": "SALES"
+        "sales": "SALES",
+        "yesterday": "Since yesterday"
       },
       "performanceCard": {
         "performance": "PERFORMANCE"

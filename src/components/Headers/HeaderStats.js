@@ -22,7 +22,7 @@ export default function HeaderStats() {
                   statArrow='up'
                   statPercent='3.48'
                   statPercentColor='text-emerald-500'
-                  statDescripiron='Since last month'
+                  statDescripiron={t('dashboard.stats.trafficCard.lastMonth')}
                   statIconName='far fa-chart-bar'
                   statIconColor='bg-red-500'
                 />
@@ -34,7 +34,7 @@ export default function HeaderStats() {
                   statArrow='down'
                   statPercent='3.48'
                   statPercentColor='text-red-500'
-                  statDescripiron='Since last week'
+                  statDescripiron={t('dashboard.stats.newUsersCard.lastWeek')}
                   statIconName='fas fa-chart-pie'
                   statIconColor='bg-orange-500'
                 />
@@ -46,7 +46,7 @@ export default function HeaderStats() {
                   statArrow='down'
                   statPercent='1.10'
                   statPercentColor='text-orange-500'
-                  statDescripiron='Since yesterday'
+                  statDescripiron={t('dashboard.stats.salesCard.yesterday')}
                   statIconName='fas fa-users'
                   statIconColor='bg-pink-500'
                 />
@@ -60,7 +60,7 @@ export default function HeaderStats() {
                   statArrow='up'
                   statPercent='12'
                   statPercentColor='text-emerald-500'
-                  statDescripiron='Since last month'
+                  statDescripiron={t('dashboard.stats.trafficCard.lastMonth')}
                   statIconName='fas fa-percent'
                   statIconColor='bg-lightBlue-500'
                 />

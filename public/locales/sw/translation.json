@@ -42,13 +42,16 @@
     },
     "stats": {
       "trafficCard": {
-        "traffic": "TRAFIKI"
+        "traffic": "TRAFIKI",
+        "lastMonth": "Tangu mwezi uliopita"
       },
       "newUsersCard": {
-        "newUsers": "WATUMIAJI WAPYA"
+        "newUsers": "WATUMIAJI WAPYA",
+        "lastWeek": "Tangu wiki iliyopita"
       },
       "salesCard": {
-        "sales": "MAUZO"
+        "sales": "MAUZO",
+        "yesterday": "Tangu jana"
       },
       "performanceCard": {
         "performance": "UTENDAJI"
