@@ -43,7 +43,7 @@ const NavElements = ({ children }) => {
 
 function PseudoLocalization() {
   React.useEffect(() => {
-    pseudoLocalization.start({ strategy: 'bidi' });
+    pseudoLocalization.start();
 
     return () => {
       pseudoLocalization.stop();
@@ -52,7 +52,7 @@ function PseudoLocalization() {
 }
 
 export const AppRoutes = () => {
-  // PseudoLocalization();
+  //PseudoLocalization();
   return (
     <Router>
       <AuthProvider>
